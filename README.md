@@ -9,6 +9,9 @@ Nginx
 git clone git@github.com:fluentech-group/laravel_template.git <project-name>
 cd <project-name>
 
+# Copy .env
+copy .env.example => .env
+
 # Build & run docker service
 docker compose up -d
 
