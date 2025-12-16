@@ -54,10 +54,16 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && \
 RUN pecl install redis \
  && docker-php-ext-enable redis
 
-COPY .env.example .env
-
 # Installation de Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+COPY composer.json composer.json
+
+RUN ["composer", "install"]
+
+COPY .env.example .env
+
+
 
 
 # Configuration PHP personnalisée
