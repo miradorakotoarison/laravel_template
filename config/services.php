@@ -35,4 +35,13 @@ return [
         ],
     ],
 
+    'sharp_api' => [
+        'base_url' => env('SHARP_API_BASE_URL'),
+        'api_key' => env('SHARP_API_KEY'),
+        'version' => env('SHARP_API_VERSION', 'v1'),
+        'timeout' => env('SHARP_API_TIMEOUT', 30),
+        'retry_times' => env('SHARP_API_RETRY_TIMES', 3),
+        'retry_delay' => env('SHARP_API_RETRY_DELAY', 100),
+        'skills_path' => env('SHARP_API_SKILLS_PATH', '/skills'),
+    ],
 ];
