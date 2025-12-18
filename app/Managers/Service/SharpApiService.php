@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Service;
+namespace App\Managers\Service;
 
 use App\Managers\Http\BaseHttpClient;
 use App\Managers\Providers\ProviderInterface;

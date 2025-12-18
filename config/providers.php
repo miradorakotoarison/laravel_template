@@ -13,9 +13,9 @@ return [
     */
 
     'mapping' => [
-        'sharp' => \App\Service\SharpApiService::class,
-        'sharpapi' => \App\Service\SharpApiService::class,
-        'sharpid' => \App\Service\SharpApiService::class,
+        'sharp' => \App\Managers\Service\SharpApiService::class,
+        'sharpapi' => \App\Managers\Service\SharpApiService::class,
+        'sharpid' => \App\Managers\Service\SharpApiService::class,  
         
         // Add more providers here as needed
         // 'another_provider' => \App\Service\AnotherProviderService::class,
