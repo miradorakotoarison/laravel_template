@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Managers\Http;
+namespace App\Services\Http;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;

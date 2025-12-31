@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Managers\Service;
+namespace App\Services\Sharp;
 
-use App\Managers\Http\BaseHttpClient;
-use App\Managers\Providers\ProviderInterface;
+use App\Services\Http\BaseHttpClient;
+use App\Services\Interfaces\CommonInterface;
 
-class SharpApiService extends BaseHttpClient implements ProviderInterface
+class CustomerService extends BaseHttpClient implements CommonInterface
 {
     protected function configure(): void
     {
@@ -26,15 +26,8 @@ class SharpApiService extends BaseHttpClient implements ProviderInterface
         $this->retryDelay = $this->serviceConfig['retry_delay'] ?? 100;
     }
 
-    public function fetchSkills(array $params = [])
+    public function doSomething()
     {
-        $path = $this->serviceConfig['skills_path'] ?? '/skills';
-        return $this->get($path, $params);
-    }
-
-    public function getProviderName(): string
-    {
-        $providerName = substr(static::class, strrpos(static::class, '\\') + 1);
-        return rtrim($providerName, 'Service');
+        // do something (overload)
     }
 }
