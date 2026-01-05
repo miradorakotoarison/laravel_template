@@ -36,6 +36,10 @@ RUN apk add --no-cache \
     libwebp \
     freetype \
     postgresql-libs
+    
+# Installation de Node.js
+RUN apk add --no-cache nodejs npm
+    
 
 # Installation des extensions PHP
 RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp && \
